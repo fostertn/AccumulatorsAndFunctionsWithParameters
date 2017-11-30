@@ -12,7 +12,6 @@ def main():
     """ Calls the   TEST   functions in this module. """
     #run_test_sum_cosines()
     run_test_sum_square_roots()
-    sum_square_roots(5)
 
 
 def run_test_sum_cosines():
@@ -99,6 +98,8 @@ def run_test_sum_square_roots():
     print('--------------------------------------------------')
 
     sum_square_roots(5)
+    sum_square_roots(3)
+    sum_square_roots(8)
 
 
 
@@ -126,10 +127,10 @@ def sum_square_roots(n):
     #   No fair running the code of  sum_square_roots  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
-    for k in range (n):
-        answer = 0
+    answer = -1
+    for k in range(n):
         answer += math.sqrt(2 * n)
-    return answer
+    print(answer)
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
