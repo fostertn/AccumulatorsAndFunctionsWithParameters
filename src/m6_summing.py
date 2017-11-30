@@ -98,13 +98,13 @@ def run_test_sum_square_roots():
     print('--------------------------------------------------')
 
     n = 4
+    
 
-    square = math.sqrt(n)
-    print()
-    print('the square root of 4 should be 2')
+
 
 
 def sum_square_roots(n):
+
     """
     What comes in:  A non-negative integer n.
     What goes out:  The sum of the square roots of the integers
