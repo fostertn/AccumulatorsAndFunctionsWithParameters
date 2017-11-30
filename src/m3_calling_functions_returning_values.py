@@ -151,34 +151,33 @@ def run_test_digits_in_cube():
 
     n = 5
     answer = n**3
+    expected = 8
     sum = sum_of_digits(answer)
-    print()
-    print(n , 'cubed should be 125 and should add up to 8')
-    print(n, 'cubed is actually', answer)
-    print('the numbers in', answer, 'add up to', sum)
+    print('test 1 expected:', expected)
+    print('       actual:  ', sum)
 
-    n = math.pi
-    answer = n**3
-    sum = sum_of_digits(answer)
-    print()
-    print(n, 'cubed should be 30 and should add up to 3')
-    print(n, 'cubed is actually', answer)
-    print('the numbers in', answer, 'add up to', sum)
 
-    n = math.log(100, 5)
+    n = 10
     answer = n**3
+    expected = 1
     sum = sum_of_digits(answer)
     print()
-    print(n, 'cubed should be 10 and should add up to 1')
-    print(n, 'cubed is actually', answer)
-    print('the numbers in', answer, 'add up to', sum)
+    print('test 2 expected:', expected)
+    print('       actual:  ', sum)
+
+    n = 8
+    answer = n**3
+    expected = 8
+    sum = sum_of_digits(answer)
+    print()
+    print('test 3 expected:', expected)
+    print('       actual:  ', sum)
+
 
 def digits_in_cube(n):
     answer = n ** 3
-    sum = sum_of_digits(answer)
-    print()
-    print(n, 'cubed is', answer)
-    print('the numbers in', answer, 'add up to', sum)
+    dog = sum_of_digits(answer)
+    return dog
 
     """
     What comes in:  A positive integer.
@@ -252,9 +251,7 @@ def digits_in_power(n, k):
 
     actual_power = n ** k
     actual_sum = sum_of_digits(actual_power)
-    print()
-    print(n, 'to the', k, 'power adds up to', n ** k)
-    print('the numbers in', actual_power, 'add up to', actual_sum)
+    return actual_sum
 
     """
     What comes in:  Two positive integers, n and k.
@@ -327,7 +324,7 @@ def fancy_sums_of_digits(n):
     x = n ** 1000
     y = n ** 999
     big_man = x ** y
-    print('the number is ', big_man)
+    return big_man
     """
     What comes in:  A positive integer n.
     What goes out:

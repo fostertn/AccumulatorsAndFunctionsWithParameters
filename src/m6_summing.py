@@ -4,9 +4,9 @@ in its simplest classic forms:
    SUMMING:       total = total + number
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
-
+         their colleagues and Tyler Foster.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
+import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
@@ -17,7 +17,7 @@ def main():
 def run_test_sum_cosines():
     """ Tests the   sum_cosines   function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this function.
+    # DONE: 2. Implement this function.
     #   It TESTS the  sum_cosines  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -29,8 +29,40 @@ def run_test_sum_cosines():
     print('Testing the   sum_cosines   function:')
     print('--------------------------------------------------')
 
+    n = math.pi
+    cosine = math.cos(n)
+    summary = sum_of_digits(cosine)
+    print()
+    print('the cosine of pi should be -1')
+    print('adding all the numbers in -1 should add to 1')
+    print('the cosine of', n, 'is', cosine)
+    print('the sum of the numbers in', cosine, 'is', summary)
+
+    n = math.e
+    cosine = math.cos(n)
+    summary = sum_of_digits(cosine)
+    print()
+    print('the cosine of pi should be -.9')
+    print('adding all the numbers in -.9 should add to .9')
+    print('the cosine of', n, 'is', cosine)
+    print('the sum of the numbers in', cosine, 'is', summary)
+
+    n = 1.5707
+    cosine = math.cos(n)
+    summary = sum_of_digits(cosine)
+    print()
+    print('the cosine of pi/2 degrees should be 0')
+    print('adding all the numbers in 0 should add to 0')
+    print('the cosine of', n, 'is', cosine)
+    print('the sum of the numbers in', cosine, 'is', summary)
 
 def sum_cosines(n):
+
+    cosine = math.cos(n)
+    summary = sum_of_digits(cosine)
+    print()
+    print('the cosine of', n, 'is', cosine)
+    print('the sum of the numbers in', cosine, 'is', summary)
     """
     What comes in:  A non-negative integer n.
     What goes out:  The sum of the cosines of the integers
@@ -41,7 +73,7 @@ def sum_cosines(n):
         cos(0) + cos(1) + cos(2) + cos(3)   which is about 0.13416.
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -64,6 +96,12 @@ def run_test_sum_square_roots():
     print('--------------------------------------------------')
     print('Testing the   sum_square_roots   function:')
     print('--------------------------------------------------')
+
+    n = 4
+
+    square = math.sqrt(n)
+    print()
+    print('the square root of 4 should be 2')
 
 
 def sum_square_roots(n):
@@ -92,4 +130,19 @@ def sum_square_roots(n):
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
+
+def sum_of_digits(number):
+    if number < 0:
+        number = -number
+
+    digit_sum = 0
+    while True:
+        if number == 0:
+            break
+        digit_sum = digit_sum + (number % 10)
+        number = number // 10
+
+    return digit_sum
+
+
 main()
